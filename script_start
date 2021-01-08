@@ -1,0 +1,3 @@
+#!/bin/bash
+su - remoteviewer
+remote-viewer /home/remoteviewer/download
