@@ -6,10 +6,9 @@ In macOS 11 (Big Sur) the [traditional solution](https://www.spice-space.org/osx
 - [Xquartz](https://www.xquartz.org/)
 
 ### How to use?
+Puedes usarlo ejecutando en la terminal el siguiente comando, cambiando ((((spice_proxy_file)))) por el archivo aportado por Proxmox.
 ```bash
 xhost + $(hostname)
-```
-```bash
 docker run \
     --rm \
     -v ((((spice_proxy_file)))):/home/remoteviewer/download \
@@ -17,6 +16,24 @@ docker run \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     domingoruiz/remote-viewer-macos11
 ```
+If you use this regularly, it is best to create a function in the .zshrc file with the following code.
+```bash
+remote-viewer(){
+        xhost + $(hostname)
+        docker run \
+            --rm \
+            -v $1:/home/remoteviewer/download \
+            -e DISPLAY=$(hostname):0 \
+            -v /tmp/.X11-unix:/tmp/.X11-unix \
+            domingoruiz/remote-viewer-macos11
+        rm $1
+}
+```
+After that to open a virtual machine we have to simply execute this command. At first glance it is the same as the traditional command.
+```bash
+remote-viewer /Users/domingo/Downloads/download
+```
+
 ### Development
 Application developed by [Domingo Ruiz Arroyo](https://doming.es/) in 2021
 
