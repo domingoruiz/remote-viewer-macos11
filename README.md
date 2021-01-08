@@ -6,7 +6,7 @@ In macOS 11 (Big Sur) the [traditional solution](https://www.spice-space.org/osx
 - [Xquartz](https://www.xquartz.org/)
 
 ### How to use?
-Puedes usarlo ejecutando en la terminal el siguiente comando, cambiando ((((spice_proxy_file)))) por el archivo aportado por Proxmox.
+You can use it by executing the following command in the terminal, changing ((((spice_proxy_file)))) for the file provided by Proxmox.
 ```bash
 xhost + $(hostname)
 docker run \
