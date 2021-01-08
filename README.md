@@ -1,5 +1,5 @@
 # Remote-viewer on macOS 11
-In macOS 11 (Big Sur) the traditional solution that has always been used to use remote-viewer has stopped working, so I have decided to look for an alternative. This is based on installing remote-viewer inside a Docker container.
+In macOS 11 (Big Sur) the [traditional solution](https://www.spice-space.org/osx-client.html) that has always been used to use remote-viewer has stopped working, so I have decided to look for an alternative. This is based on installing remote-viewer inside a Docker container.
 
 ### Requirements
 - [Docker](https://docs.docker.com/docker-for-mac/install/)
