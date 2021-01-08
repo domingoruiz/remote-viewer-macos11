@@ -12,7 +12,7 @@ xhost + $(hostname)
 ```bash
 docker run \
     --rm \
-    -v ((((download file)))):/home/remoteviewer/download \
+    -v ((((spice_proxy_file)))):/home/remoteviewer/download \
     -e DISPLAY=$(hostname):0 \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     domingoruiz/remote-viewer-macos11
